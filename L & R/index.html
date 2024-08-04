@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #af9078;
+        }
+        .container {
+            width: 50%;
+            margin: 10% auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 1;
+            padding: 5px;
+        }
+        .column img {
+            width: 100%;
+            height: auto;
+        }
+        .login-box {
+            text-align: center;
+            margin-top: 70px;
+        }
+        .login-box h1 {
+            font-size: 30px;
+            font-family: 'Pacifico', cursive;
+            font-weight: 500;
+            margin-bottom: 70px;
+        }
+        .login-box h2 {
+            font-size: 18px;
+            font-family: 'Lato',sans-serif;
+            color: #918e8e;
+            margin-bottom: 70px;
+        }
+        .input-box {
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: 80%;
+            padding: 5px;
+            outline: none;
+        }
+        .login-button {
+            background-color: #af9078;
+            color: #fff;
+            border: none;
+            padding: 10px 40px;
+            margin-top: 50px;
+            cursor: pointer;
+            font-family: 'Lato',sans-serif;
+            font-size: 15px;
+        }
+        .or-line {
+            border-top: 1px solid #ccc;
+            text-align: center;
+            margin: 50px 50px;
+            font-family: 'Lato',sans-serif;
+            
+        }
+        .google-signin {
+            text-align: center;
+            font-family: 'Lato',sans-serif;
+            
+        }
+        .google-signin img {
+            text-align: center;
+            width: 40px;
+            margin-top: -20px
+
+
+
+        }
+        .create-account {
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Lato',sans-serif;
+        }
+        .create-account a {
+            text-decoration: underline;
+            font-family: 'Lato',sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <img src="RE.jpg" alt="User Image">
+            </div>
+            <div class="column">
+                <div class="login-box">
+                    <h1>Company Name</h1> <!-- Corrected the spelling of "Company" -->
+                    <h2>Welcome to Company Name</h2>
+                    <input type="text" class="input-box" id="username" placeholder="Username">
+                    <input type="password" class="input-box" id="password" placeholder="Password">
+                    <button class="login-button" onclick="authenticate()">Login</button>
+                    <div class="or-line">or</div>
+                    <div class="google-signin">
+                        <a href="https://accounts.google.com/">
+                            
+                            <span>Sign in with Google</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="create-account">
+                    New Here? <a onclick="window.location.href='reg.html'">Create Account</a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function authenticate() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Replace these with your actual credentials
+            const validUsername = 'your_username';
+            const validPassword = 'your_password';
+
+            if (username === validUsername && password === validPassword) {
+                alert('Authentication successful! Redirecting to dashboard...');
+                // You can add a redirect here or perform other actions.
+            } else {
+                alert('Authentication failed. Please check your username and password.');
+            }
+        }
+    </script>
+</body>
+</html>

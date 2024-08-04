@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/css/bootstrap.min.css">
+
+    <style>
+ 
+
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+            background-color: #f5f5f5;
+            color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px; 
+            height: auto;
+            margin-right: 10px;
+        }
+
+   
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navigation a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .auth-buttons button {
+            background-color: #fff;
+            color: #030303;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+
+        .section {
+            background-image: url('wp.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            height: 90vh; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            text-align: left;
+            color: white;
+        }
+
+        .section-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+          
+           
+        }
+
+        .section h1 {
+            font-size: 75px;
+            margin-bottom: 20px;
+            color: black;
+            font-family: 'Lato', sans-serif;
+            margin-left:50px;
+            font-weight: 800;
+        }
+
+        .section hr {
+            border: 2px solid rgb(0, 0, 0);
+            width: 470px;
+            margin-bottom: 40px;
+            margin-top: -20px;
+            margin-right:890px;
+          
+
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: black;
+            font-family: 'Lato', sans-serif;
+            margin-left: 50px;
+        }
+
+        .section .get-started-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+      
+
+        .section .additional-buttons {
+            display: flex;
+            justify-content:right;
+            margin-top: 30px;
+            margin-right: 1020px;
+        }
+
+        .section .additional-button {
+            background-color:rgb(255, 255, 255); 
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            margin-top: 20px;
+            margin: 10px
+        }
+
+
+        .new-section {
+            
+            background-image: linear-gradient(to right, rgb(182, 141, 121), rgb(117, 53, 25)); /* Dual shade brown background */
+            background-position: center;
+            height: 80vh; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            text-align: left;
+            background-color: rgb(230, 202, 169);
+        }
+
+        .new-section-content {
+           
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            color: rgb(0, 0, 0);
+         
+        }
+
+        .new-section h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-family: 'Lato', sans-serif;
+            color: rgb(0, 0, 0);
+            font-weight: 800;
+            margin-top: 180px;
+            margin-left: 150px
+            
+
+        }
+
+        .new-section .explore-button {
+       
+            background-color: blue; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            margin-top: -60px;
+           margin-right: -350px;
+           margin-left: 620px;
+    
+        }
+        
+        .card-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-end; 
+            flex-grow: 1; 
+            margin-top: 200px;
+            margin-bottom: -100px;
+            margin-right: 150px;
+            
+        }
+
+        
+        .card {
+            width: 15rem;
+            margin-right: 140px; 
+            margin-bottom: 20px;
+            background-color: white;
+            
+        }
+
+        .card img {
+            width: 18rem;
+            height : 14rem
+
+        }
+        .card:last-child {
+            margin-right: 450px;
+            margin-bottom: 700px;
+            margin-top: -650px;
+        }
+       
+        .logos-section {
+            background-color: white; 
+            height: 70vh; 
+            display: flex;
+            margin-left: 120px;
+            align-items: center;
+            
+        }
+
+        .logos-section img {
+            width: 200px; 
+            height: auto;
+            align-items: center;
+            margin-bottom: 300px;
+            margin-left: 50px;
+          
+        }
+        .logos-section h1 {
+            font-size:50px;
+            margin-top: 200px;
+            margin-bottom: 1px;
+            color: black;
+            font-family: 'Lato', sans-serif;
+          margin-right: 1000px;
+          margin-left: -1200px;
+            font-weight: 800;
+        }
+
+        .logos-section hr {
+            border: 2px solid rgb(0, 0, 0);
+            width: 380px;
+            margin-bottom: 40px;
+            margin-top: -20px;
+            margin-right:1200px;
+            margin-left: -1200px;
+            
+          
+
+        }
+
+        .logos-section p {
+            font-size: 18px;
+            margin-bottom: 60px;
+            margin-top: -150px;
+            color: black;
+            font-family: 'Lato', sans-serif;
+            margin-left: -500px;
+           
+        }
+          
+             
+        .learning-section {
+            background-color: white; 
+            height: auto; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .learning-container {
+            background-color: rgb(252, 156, 91); 
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            height: 80vh;
+            width: 140vh;
+            margin-bottom: 100px;
+            margin-top: 100px;
+        }
+
+        .learning-container h1 {
+            font-size: 42px;
+            margin-bottom: 40px;
+            font-family: 'Lato', sans-serif;
+            color: rgb(255, 255, 255);
+            margin-top: 100px;
+         
+        }
+
+        .learning-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: rgb(255, 255, 255);
+            text-align: left;
+            line-height: 30px;
+            
+        }
+
+        .learning-buttons {
+            display: flex;
+            margin-left: 7%;
+            align-items: left;
+        }
+
+        .learning-button {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 14px 50px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            margin: 10px;
+            
+        }
+        
+        .learning-buttonss {
+            background-color: blue; 
+            color: rgb(255, 255, 255);
+            padding: 14px 50px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            margin: 10px;
+            
+        }
+
+
+        .learning-image img {
+            max-width: 400px; 
+            max-height: auto;
+            margin-top: -700px;
+        margin-bottom: -15px;
+            margin-left: 57%;
+
+
+       
+        }    
+     /*  Meet Mentors section */
+.meet-mentors-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgb(172, 172, 172);
+}
+
+.meet-mentors-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meet-mentors-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 55px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*  Mentor Cards */
+.meet-mentors-section .card-columns {
+    column-count: 3; 
+    column-gap: 0.1px; 
+    
+}
+
+.meet-mentors-section .card {
+    background-color: #f5f5f5; 
+    text-align: center;
+    border: none;
+    max-width: 18rem;
+    margin: 0 auto; 
+}
+
+.meet-mentors-section  .card img {
+    width: 100%;
+    height: auto;
+}
+
+.meet-mentors-section  .card p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #000;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.explore-mentors-button {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    margin-top: 60px;
+}
+/* What Our section */
+.what-our-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.what-our-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.what-our-content h1 {
+    font-size:56px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    margin-left: 20px;
+}
+
+.what-our-content hr {
+    border: 2px solid #000;
+    width:340px;
+    margin-top: 1px;
+    text-align: left;
+   margin-left: 17px;
+}
+
+
+
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 750px;
+    margin-left: 20px;
+}
+
+
+.column {
+    flex: 1;
+    width: 0.5%;
+}
+
+
+.column .card {
+    background-color: #e6d8d8;
+    text-align: left;
+    border: none;
+    padding: 20px;
+}
+
+.column .card img {
+    border-radius: 50%;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  
+}
+
+.column .card p {
+    font-size: 18px;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+
+.column .card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Rectangle Box */
+.rectangle-box {
+    background-color:rgb(252, 156, 91);
+    color: #fff;
+    padding: 30px;
+    margin-top: -600px;
+    text-align: center;
+    border-radius: 10px;
+    width: 1000px;
+    margin-left: 20px;
+}
+
+.rectangle-box h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+margin-left: 30px;   
+
+}
+
+.rectangle-box p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    margin-left: 30px; 
+}
+
+
+.register-button {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+   margin-bottom: -60px;
+   margin-left: 750px;
+   margin-top: -50px;
+
+}
+.last-section {
+    background-color: #f5f5f5; 
+    padding: 30px 20px;
+    text-align: center;
+
+}
+
+
+.last-section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.last-section .column {
+    flex: 1;
+    width: 20%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+.last-section .column h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Lato', sans-serif
+}
+
+
+.last-section .column ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+
+.last-section .column img {
+    width: 32px; 
+    height: 32px;
+    margin: 5px;
+}
+
+.last-section hr {
+    border: none;
+    border-top: 1px solid rgb(252, 156, 91);
+    margin: 20px 0;
+    width: 1300px;
+    margin-left: 100px;
+}
+
+.last-section p {
+    font-size: 16px;
+    color: #000;
+    font-family: 'Lato', sans-serif
+}
+
+            
+        
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo1.png" alt="Company Logo">
+            <h1>Company Name</h1>
+        </div>
+        <div class="navigation">
+            <a href="#">Features</a>
+            <a href="#">Post a Job</a>
+            <a href="#">About Us</a>
+            <a href="#">Recent Posts</a>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="window.location.href='index.html'">Login</button>
+
+<button onclick="window.location.href='reg.html'">Register</button>
+        </div>
+    </header>
+    
+    <div class="section">
+        <div class="section-content">
+            <h1>Get Started <br> Your Learning </h1>
+            <hr>
+            <p>A line cliché is a stepwise line (either descending or ascending) <br>
+                that moves against a single stationary chord.</p>
+            <div class="button-container">
+                <button class="get-started-button">Get Started</button>
+                <div class="additional-buttons">
+                    <button class="additional-button">Largest Collection<br> for Every Course</button>
+                    <button class="additional-button">Expert Instructor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logos-section">
+        <img src="logo3.png" alt="Logo 1">
+        <img src="logo2.png" alt="Logo 2">
+        <img src="logo01.png" alt="Logo 3">
+        <img src="logo4.png" alt="Logo 4">
+        <img src="logo5.png" alt="Logo 5">
+
+    
+        <div> <h1>Our Most<br> Popular Courses </h1><br>
+            <hr>
+            <p>A line cliché is a stepwise line (either descending or ascending) <br>
+                that moves against a single stationary chord. <br>
+                It allows the composer to sustain a particular chord while </p>
+        </div> 
+    
+    </div>
+
+
+    <div class="new-section">
+       
+        <div class="new-section-content">
+            <h2>Get Know <br> About Our Courses </h2>
+            <button class="explore-button">Explore Courses</button>
+        </div>
+    
+       <!-- Card Container -->
+       <div class="card-container">
+     
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="c4.png" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><br>Python Course<br> <br> Teaching Python Coding Beginner to Pro<br><br> $30.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="c5.png" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><br>Figma Course<br> <br> Teaching Figma Course Beginner to Pro<br><br> $30.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="c1.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><br>Web Designing Course<br> <br> Teaching Web Designing Course Beginner<br><br> $30.</p>
+            </div>
+        </div>
+        
+    </div>
+ 
+    </div>
+    <!-- Learning Section -->
+    <div class="learning-section">
+        <div class="learning-container">
+            <div class="learning-content">
+            <h1>World-class learning for <br> anyone, anywhere</h1>
+            <p>A line cliché is a stepwise line  that moves against a single stationary chord.<br>
+                 It allows the composer to sustain a particular chord while adding some<br> movement and interest to an otherwise boring and static progression.
+                <br>Explore our wide range of courses and start your learning journey today.</p>
+            <div class="learning-buttons">
+                <button class="learning-button">Somethingss</button>
+                <button class="learning-button">XYX ABCD</button>
+            </div>
+            <div class="learning-buttons">
+                <button class="learning-button">25+ Degrees</button>
+                <button class="learning-button">30+ Special</button>
+                
+            </div>
+
+        </div>
+        <div class="learning-buttons">
+            <button class="learning-buttonss">Get Started</button>
+           
+        </div>
+            <div class="learning-image">
+                <img src="l2.jpg" alt="Learning Image">
+            </div>
+        </div>
+    </div>
+ 
+<!-- Meet Mentors Section -->
+<div class="meet-mentors-section">
+    <div class="meet-mentors-content">
+        <h1>Meet With Our Mentors</h1>
+        <div class="card-columns">
+           
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="L1.jpeg" alt="Mentor 1">
+                <div class="card-body">
+                    <p class="card-text"><br>Sajad khan<br> <br> Expert in Python Coding<br>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="L1.jpeg" alt="Mentor 2">
+                <div class="card-body">
+                    <p class="card-text"><br>Sajad Khan<br> <br> Professional Web Designer<br>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="L1.jpeg" alt="Mentor 3">
+                <div class="card-body">
+                    <p class="card-text"><br>Sajad Khan<br> <br> Figma Expert<br>
+                </div>
+            </div>
+        </div>
+        <button class="explore-mentors-button">Explore Mentors</button>
+    </div>
+</div>
+
+<div class="what-our-section">
+    <div class="what-our-content">
+        <h1>What Our<br> Learners Says</h1>
+        <hr>
+        <div class="columns-container">
+       
+            <div class="column">
+                <div class="card">
+                    <img src="p1.jpg" alt="Image 1">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Sajad Khan</h3>
+                    </div>
+                </div>
+            </div>
+
+       
+            <div class="column">
+                <div class="card">
+                    <img src="p1.jpg" alt="Image 2">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Sajad Khan</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="p1.jpg" alt="Image 3">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Sajad Khan</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rectangle-box">
+            <h2>Ready To Join</h2>
+            <p>Explore our courses and take your skills to the next level.</p>
+            <button class="register-button">Register Now</button>
+        </div>
+    </div>
+</div>
+<div class="last-section">
+    <div class="last-section-content">
+        <div class="column">
+            <h1>Company Name</h1>
+            <p>Company description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="column">
+            <h1>Services</h1>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h1>Company</h1>
+            <ul>
+                <li>About Us</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h1>Support</h1>
+            <ul>
+                <li>Contact Us</li>
+                <li>FAQ</li>
+                <li>Customer Support</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h1>Follow Us</h1>
+            <img src="facebook-logo.png" alt="Facebook Logo">
+            <img src="twitter-logo.png" alt="Twitter Logo">
+            <img src="instagram-logo.png" alt="Instagram Logo">
+            <img src="linkedin-logo.png" alt="LinkedIn Logo">
+        </div>
+    </div>
+    <hr>
+    <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+</div>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   
+</body>
+</html>
